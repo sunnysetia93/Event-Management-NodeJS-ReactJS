@@ -1,6 +1,7 @@
 # Event-Management-NodeJS
 
 Fully developed, scalable APIs for Event management system, developed using **Node.js**, **Express.js**
+Front-end using **React.js** (front-end Currently in development)
 
 ### New Features:
 
@@ -9,6 +10,7 @@ Fully developed, scalable APIs for Event management system, developed using **No
 
 
 **You can also**:
+
   - Create, update, delete events, invitees.
   - user login to host users for creating invitees.
 
@@ -16,6 +18,7 @@ Fully developed, scalable APIs for Event management system, developed using **No
 
 * node.js - evented I/O for the backend
 * Express - fast node.js network app framework
+* reactJS - libraries for front-end development
 
 ### Development
 
