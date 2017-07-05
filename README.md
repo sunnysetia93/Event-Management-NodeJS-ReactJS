@@ -1,4 +1,4 @@
-# Event-Management-NodeJS
+# Event-Management-NodeJS-ReactJS
 
 Fully developed, scalable APIs for Event management system, developed using **Node.js**, **Express.js**
 Front-end using **React.js** (front-end Currently in development)
