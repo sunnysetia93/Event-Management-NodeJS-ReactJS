@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const info = require('./config');
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -6,17 +7,17 @@ const transporter = nodemailer.createTransport({
     secure: true, // secure:true for port 465, secure:false for port 587
     auth:
     {
-        user:'YOUR EMAIL ID',
-        pass: 'PASSWORD'
+        user:info.mail.email_id,
+        pass: info.mail.password
     }
 
 })
 
 function createInvite(inviteeEmail) {
     return {
-        from: 'YOUR EMAIL ID',
+        from: 'sunnysetia93@gmail.com',
         to: (typeof inviteeEmail == 'string') ? inviteeEmail : inviteeEmail.join(','),
-        subject: 'You are invited to an event',
+        subject: 'You are invited to an event at Nagarro',
         html: "<h3> Please come there's free lunch </h3>"
     }
 }
@@ -42,6 +43,7 @@ function createInviteWithToken(inviteeEmail,inviteeToken,inviteeEventId)
                 '<br> Thank You.'
     }
 }
+//<a href="+link+">Click Here</a>
 
 function sendInviteWithToken(inviteeEmail,inviteeToken,inviteeEventId,done)
 {

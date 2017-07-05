@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
+const info = require('../utils/config');
 
 const db = new Sequelize({
-    username:'',
-    password:'',
-    database:'',
+    username:info.db.username,
+    password:info.db.password,
+    database:'eventmgmt',
     host:'localhost',
     dialect:'mysql',
     pool:{

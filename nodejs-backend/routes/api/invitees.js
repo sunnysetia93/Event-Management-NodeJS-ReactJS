@@ -15,7 +15,7 @@ route.get('/:id/invitees',(req,res)=>
         attributes:['id'],
         where:{
             eventId:req.params.id,
-            '$event.hostId$':req.user.id,
+            '$event.hostId$':req.user.id,   //refer to a column -> '$columnName$'
         },
         include:[{
             model:Invitee,

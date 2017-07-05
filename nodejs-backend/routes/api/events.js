@@ -110,7 +110,8 @@ route.post('/add',(req,res)=>
                         EventInvitee.create(
                             {
                                 eventId:ev.eventId,
-                                inviteeId:ev.inviteeId
+                                inviteeId:ev.inviteeId,
+                                token:uid2(25)
                             }
                         )
                     }
@@ -131,7 +132,10 @@ route.post('/add',(req,res)=>
     });
 });
 
-route.put('/:id',(req,res)=>
+   
+// yet to add clause for existing invitees in invitee table, 
+//for just adding invitees to an existing event, that API is present in invitee.js
+route.put('/:id',(req,res)=> 
 {
     Event.update({
         title:req.body.title,
